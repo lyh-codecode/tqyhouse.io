@@ -1,9 +1,13 @@
+.about {
+    min-height: 100vh;
+}
+
 .about-me {
     display: flex;
     padding: 20px;
-    background-color: rgba(232, 246, 247, 0.4);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .about-me h2 {
@@ -14,13 +18,17 @@
     color: #555;
 }
 
-
 .about-me-left {
     flex: 1;
 }
 
-@media (max-width: 768px) {
+/* 添加动画相关样式 */
+.about-me,
+.about-me-left {
+    will-change: transform, opacity;
+}
 
+@media (max-width: 768px) {
     .about-me {
         flex-direction: column;
         padding: 10px;

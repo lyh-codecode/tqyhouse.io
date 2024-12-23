@@ -18,7 +18,7 @@ const PageLayout = ({ isDark, headerContent, sidebarContent, mainContent, footer
                 </div>
                 <main className="main-content">{mainContent}</main>
             </div>
-            <footer className="footer" style={{ backgroundColor: isDark ? '#fff' : '#101e36' }}>{footerContent}</footer>
+            <footer className="footer">{footerContent}</footer>
         </div>
     );
 };

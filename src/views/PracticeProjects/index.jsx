@@ -28,7 +28,6 @@ const PracticeProjects = ({ isDark }) => {
             headerContent="练习项目的总结"
             sidebarContent={sidebarContent}
             mainContent={mainContent}
-            footerContent="页面文章跳转到其他部分"
             isDark={isDark}
         />
     );
