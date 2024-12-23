@@ -1,0 +1,25 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    z-index: 1000;
+}
+
+.loading-circle {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #70a5fd, #4f49fc);
+    margin-bottom: 20px;
+}
+
+.loading-screen h1 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}

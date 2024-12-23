@@ -1,0 +1,14 @@
+.markdown-viewer {
+    margin-left: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+    .markdown-viewer {
+        margin-left: 0;
+        flex: 1;
+        max-width: 80%;
+    }
+}

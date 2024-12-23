@@ -1,0 +1,133 @@
+.profile-info {
+    display: flex;
+}
+
+.role {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.info {
+    position: relative;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.info h3 {
+    padding-left: 5px;
+    font-size: 1.3rem;
+}
+
+.my-pic {
+    width: 18rem;
+    height: 24rem;
+    border-radius: 15%;
+    transition: transform 0.3s ease;
+}
+
+.my-pic:hover {
+    transform: scale(1.02);
+}
+
+.motto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.location {
+    gap: 1rem;
+
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    filter: var(--icon-filter);
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+
+.contact-info {
+    position: relative;
+
+}
+
+.copy-button {
+    display: inline-block;
+    line-height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+.copy-button:hover {
+    color: #70a5fd;
+}
+
+
+.copy-success {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #736fef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.copy-success.hide {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.gradient-text {
+    font-size: 2rem;
+    margin-left: 7.5rem;
+}
+
+
+.personal-info {
+    margin-top: 20px;
+    flex: 2;
+}
+
+.personal-info-title {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .my-pic {
+        width: 100%;
+        height: auto;
+    }
+}

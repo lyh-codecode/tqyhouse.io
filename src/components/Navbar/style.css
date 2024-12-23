@@ -1,0 +1,141 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    background: rgba(13, 17, 23, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s;
+}
+
+.nav-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ffffff, #3880ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link {
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    height: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #8b949e;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.github-icon:hover {
+    opacity: 1;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #8b949e;
+    border-radius: 8px 0 0 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-right: 0;
+    transition: border-color 0.3s;
+    height: 50%;
+    flex: 1;
+}
+
+.search-input::placeholder {
+    color: #8b949e;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #70a5fd;
+}
+
+.search-button {
+    border-radius: 0 8px 8px 0;
+    background-color: #70a5fd;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 85%;
+    border: 1px solid #8b949e;
+}
+
+.search-button:hover {
+    background-color: #5a8fdc;
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 0.5rem;
+    }
+}
