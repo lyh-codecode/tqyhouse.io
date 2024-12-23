@@ -26,6 +26,7 @@
     border-radius: 10px;
     transition: transform 0.3s;
     flex: 1 1 26%;
+    max-width: 41%;
 }
 
 .site-card:hover,
