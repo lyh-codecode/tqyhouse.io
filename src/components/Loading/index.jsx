@@ -10,7 +10,7 @@ const Loading = () => {
             className="loading-container"
             initial={{ backgroundColor: "rgba(2, 15, 33, 1)" }}
             animate={{ backgroundColor: "rgba(2, 15, 33, 0)" }}
-            transition={{ duration: 2, delay: 3.5 }}
+            transition={{ duration: 3, delay: 3.5 }}
         >
             <div className="welcome-text">
                 {characters.map((char, index) => (
@@ -32,7 +32,7 @@ const Loading = () => {
                 className="loading-line"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 2, delay: 0.5 }}
+                transition={{ duration: 3, delay: 0.5 }}
             />
         </motion.div>
     );
