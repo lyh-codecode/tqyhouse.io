@@ -37,6 +37,7 @@
 
 .item-icon {
     font-size: 1.5rem;
+    display: block;
 }
 
 .item-title {
@@ -176,9 +177,33 @@
 @media (max-width: 768px) {
     .item-grid {
         grid-template-columns: 1fr;
+        margin-left: -1.5rem;
     }
 
     .item-card {
         height: 500px;
+    }
+
+    .item-icon {
+        display: none;
+    }
+
+    .list-item {
+        padding: 0.8rem;
+        justify-content: center;
+    }
+
+    .item-title {
+        font-size: 0.9rem;
+    }
+
+    .sidebar-title {
+        text-align: center;
+        font-size: 1rem;
+        padding-left: 0;
+    }
+
+    .sidebar-list {
+        gap: 0.5rem;
     }
 }

@@ -104,7 +104,6 @@ const KnowledgeBase = ({ isDark }) => {
     ];
 
     const [selectedItem, setSelectedItem] = useState(items[0]);
-    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const sidebarContent = (
         <div className="sidebar-container">
