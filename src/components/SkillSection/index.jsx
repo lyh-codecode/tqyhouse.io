@@ -96,12 +96,21 @@ export default function SkillSection({ isDark }) {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % skills.length);
-        }, 4000);
+        }, 6000);
         return () => clearInterval(timer);
     }, []);
 
     const handleDotClick = (index) => {
         setCurrentIndex(index);
+    };
+
+    const handleDragEnd = (event, info) => {
+        const swipe = info.offset.x;
+        if (swipe < -100) {
+            setCurrentIndex((prev) => (prev + 1) % skills.length);
+        } else if (swipe > 100) {
+            setCurrentIndex((prev) => (prev - 1 + skills.length) % skills.length);
+        }
     };
 
     return (
@@ -116,6 +125,9 @@ export default function SkillSection({ isDark }) {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -100 }}
                         transition={{ duration: 0.5 }}
+                        drag="x"
+                        dragConstraints={{ left: 0, right: 0 }}
+                        onDragEnd={handleDragEnd}
                     >
                         <div
                             className="skill-item-large"

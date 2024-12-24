@@ -22,6 +22,7 @@
     position: relative;
     width: 100%;
     height: 300px;
+    overflow: hidden;
 }
 
 .skill-item-large {
@@ -111,8 +112,8 @@
 }
 
 @media (max-width: 768px) {
-    .carousel-container {
-        padding: 1rem;
+    .carousel-controls {
+        display: none;
     }
 
     .skill-carousel {
