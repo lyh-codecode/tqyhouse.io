@@ -44,12 +44,12 @@
     text-align: center;
 }
 
-.card-content>h3 {
+.card-content1>h3 {
     color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
-.card-content p {
+.card-content1 p {
     color: #ffffff;
     font-size: 0.9rem;
 }

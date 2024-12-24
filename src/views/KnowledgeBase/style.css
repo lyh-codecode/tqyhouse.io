@@ -1,57 +1,184 @@
-.item-grid {
+.sidebar-container {
+    padding: 1rem;
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    padding-left: 1rem;
+}
+
+.sidebar-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.item-card {
-    flex: 1 1 calc(40% - 2rem);
-    background-color: rgba(255, 255, 255, 0.8);
-    /* 背景颜色 */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-
-}
-
-.item-card:hover {
-    transform: translateY(-5px);
-    /* 悬停效果 */
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0;
 }
 
 .list-item {
     list-style: none;
     cursor: pointer;
-    font-size: 1.3rem;
-    padding: 10px;
-    background-color: rgb(255, 255, 255);
+    font-size: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.list-item:hover {
-    background-color: #e2e2e2;
-    color: #225cd8;
-
+.list-item.active {
+    background: linear-gradient(45deg, #70a5fd20, #4f49fc20);
+    border-color: #4f49fc40;
 }
 
-.dark-theme {
-    color: white;
-    /* 深色主题下的颜色 */
+.item-icon {
+    font-size: 1.5rem;
 }
 
-.light-theme {
-    color: #213547;
-    /* 浅色主题下的颜色 */
+.item-title {
+    font-weight: 500;
+}
+
+.main-content {
+    padding: 2rem;
+}
+
+.content-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.content-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.item-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: #70a5fd40;
+}
+
+.card-cover {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(45deg, #70a5fd20, #4f49fc20);
+}
+
+.card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.item-card:hover .card-cover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-color);
+    transition: background 0.3s ease;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.card-content p {
+    color: var(--text-secondary);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.item-card:hover .card-content {
+    background: linear-gradient(45deg, #70a5fd10, #4f49fc10);
+}
+
+.item-card:hover .card-content h3 {
+    color: #70a5fd;
+}
+
+.header-content {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-content p {
+    color: var(--text-secondary);
+}
+
+.footer-content {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+    .item-grid {
+        gap: 1.5rem;
+    }
+
+    .item-card {
+        height: 450px;
+    }
 }
 
 @media (max-width: 768px) {
-    .item-card {
-        flex: 1 1 100%;
-        height: 20vh;
+    .item-grid {
+        grid-template-columns: 1fr;
     }
 
-    .item-grid {
-        padding-top: 2vh;
+    .item-card {
+        height: 500px;
     }
 }

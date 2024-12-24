@@ -50,7 +50,7 @@ export default function SiteSection({ isDark }) {
                 <section className="site-section">
                     {sites.map((site, index) => (
                         <NavLink key={index} to={site.link} className="site-card" style={{ background: backgroundColor }}>
-                            <div className="card-content">
+                            <div className="card-content1">
                                 <div className="card-icon" style={{ backgroundColor: isDark ? '#828282' : '#a0a0a0' }}>{site.icon}</div>
                                 <h3 style={{ color: textColor }}>{site.title}</h3>
                                 <p style={{ color: textColor }}>{site.description}</p>
@@ -65,7 +65,7 @@ export default function SiteSection({ isDark }) {
                 <section className="site-section">
                     {campus.map((site, index) => (
                         <div key={index} className="site-card2" style={{ background: backgroundColor }}>
-                            <div className="card-content">
+                            <div className="card-content1">
                                 <div className="card-icon" style={{ backgroundColor: isDark ? '#828282' : '#a0a0a0' }}>{site.icon}</div>
                                 <h3 style={{ color: textColor }}>{site.title}</h3>
                                 <p style={{ color: textColor }}>{site.description}</p>
