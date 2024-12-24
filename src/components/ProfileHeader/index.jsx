@@ -33,7 +33,7 @@ export default function ProfileHeader({ isDark }) {
                     <div className="info">
                         <p>🧑‍💻 <strong style={{ color: '#2e015b', fontSize: '1.2rem' }}>方向：前端开发</strong></p>
                         <p>📍 <strong style={{ color: isDark ? '#ffffff' : '#464646' }}>学校：广东工业大学 </strong></p>
-                        <p>🧑‍💻 <strong style={{ color: isDark ? '#ffffff' : '#464646' }}>年级专业：27届/信息安全</strong></p>
+                        <p>🧑 <strong style={{ color: isDark ? '#ffffff' : '#464646' }}>年级专业：27届/信息安全</strong></p>
                         <p className="contact-info">
                             <strong style={{ color: isDark ? '#ffffff' : '#464646' }}>📫 邮箱：527835202@qq.com</strong>
                             <button

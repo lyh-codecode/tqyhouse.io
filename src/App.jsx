@@ -3,15 +3,17 @@ import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-import LoadingScreen from '@components/LoadingScreen'
-import SiteSection from '@components/SiteSection'
+import Loading from '@components/Loading'
+import LoadingScreen from './components/LoadingScreen'
+
 import Navbar from '@components/Navbar'
 import Studio from '@views/Studio'
 import KnowledgeBase from '@views/KnowledgeBase'
 import PracticeProjects from '@views/PracticeProjects'
 import Planning from '@views/Planning'
 import AboutMe from '@views/about/AboutMe'
-import PageLayout from '@components/knowledge-Layout'
+import Index from '@views/index'
+
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -30,7 +32,7 @@ function App() {
     // 模拟加载过程
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,7 +41,7 @@ function App() {
     <Router>
       <AnimatePresence mode='wait'>
         {isLoading ? (
-          <LoadingScreen key="loading" />
+          <Loading key="loading" />
         ) : (
           <motion.div
             key="content"
@@ -55,7 +57,7 @@ function App() {
                 <Route path="/practice-projects" element={<PracticeProjects isDark={isDark} />} />
                 <Route path="/studio" element={<Studio />} />
                 <Route path="/planning" element={<Planning />} />
-                <Route path="/index" element={<SiteSection isDark={isDark} />} />
+                <Route path="/index" element={<Index isDark={isDark} />} />
                 <Route path="/about" element={<AboutMe isDark={isDark} />} />
                 <Route path='/' element={<Navigate to="/index" />} />
                 <Route path="*" element={<Navigate to="/index" />} />
