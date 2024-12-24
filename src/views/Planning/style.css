@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(45deg, #4a1d96, #be185d);
+    /* background: linear-gradient(45deg, #4a1d96, #be185d); */
     position: relative;
     overflow: hidden;
 }
@@ -107,7 +107,6 @@ li:hover {
 
 .page-title {
     text-align: center;
-    color: white;
     margin-bottom: 2rem;
     font-size: 2.5rem;
 }
@@ -140,7 +139,7 @@ li:hover {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: white;
+    background: linear-gradient(-45deg, #ffb3e2, #7977d5);
 }
 
 .item-icon {
@@ -160,7 +159,6 @@ li:hover {
 
 .accordion-content {
     padding: 0 1.5rem 1.5rem;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .accordion-content p {
@@ -177,14 +175,14 @@ li:hover {
 }
 
 .sub-items li {
-    background: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(-45deg, #c8c7ea, #8f8feb);
     padding: 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .sub-items li:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: linear-gradient(-45deg, #d948a1, #bab9ea);
     transform: translateX(5px);
 }
 

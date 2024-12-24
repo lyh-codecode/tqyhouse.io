@@ -9,21 +9,20 @@ const Planning = () => {
             icon: '🎯',
             description: '完成前端核心技术的学习，包括：',
             subItems: [
-                'React深入学习与实践',
-                'TypeScript系统掌握',
-                '前端工程化建设',
-                '性能优化专题研究'
+                'React设计原理',
+                'TypeScript学习',
+                'Framer-motion动画库的使用',
+                '前端工程化'
             ]
         },
         {
-            title: '进行中项目',
+            title: '进行中',
             icon: '🚀',
-            description: '当前正在进行的项目：',
+            description: '当前正在进行的事情：',
             subItems: [
-                '个人博客系统开发',
-                '前端组件库建设',
-                '移动端适配优化',
-                'WebGL特效开发'
+                '个人博客系统开发和完善',
+                '利用原生JS手写一些小功能',
+                'React原理学习'
             ]
         },
         {
@@ -34,7 +33,7 @@ const Planning = () => {
                 '算法与数据结构',
                 '设计模式实践',
                 '网络协议深入',
-                '前端安全防护'
+                '前端性能优化'
             ]
         },
         {
