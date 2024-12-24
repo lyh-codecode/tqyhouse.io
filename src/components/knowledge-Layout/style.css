@@ -16,15 +16,23 @@
     height: 100vh;
     max-width: 15%;
     min-width: 15%;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 80;
     text-align: center;
-    border-right: 2px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .main-content {
     flex: 1;
     padding: 1rem;
+    padding-left: calc(15% + 1rem);
+    transition: padding-left 0.3s ease;
+}
+
+.main-content.sidebar-closed {
+    padding-left: 1rem;
 }
 
 .footer {
@@ -33,33 +41,56 @@
 }
 
 .sidebar-toggle {
-    display: none;
+    position: fixed;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, #70a5fd, #4f49fc);
+    width: 28px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    z-index: 101;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-toggle:hover {
+    background: linear-gradient(45deg, #4f49fc, #70a5fd);
+    width: 32px;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar.closed {
     transform: translateX(-100%);
 }
 
-.sidebar-toggle {
-    display: block;
-    position: fixed;
-    left: 15%;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #3880ed;
-    width: 24px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 0 4px 4px 0;
-    z-index: 101;
-    transition: left 0.3s ease;
-}
-
 .sidebar.closed+.sidebar-toggle {
     left: 0;
+}
+
+/* 添加滚动条样式 */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #70a5fd80, #4f49fc80);
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #70a5fd, #4f49fc);
 }
 
 @media (max-width: 768px) {
@@ -72,12 +103,19 @@
         min-width: 25%;
         transition: transform 0.3s ease;
         z-index: 80;
-        background-color: #ffffff;
     }
 
     .sidebar-toggle {
         left: 25%;
+        width: 24px;
+        height: 40px;
     }
 
+    .main-content {
+        padding-left: calc(25% + 1rem);
+    }
 
+    .main-content.sidebar-closed {
+        padding-left: 1rem;
+    }
 }

@@ -1,22 +1,32 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './style.css';
 
-const PageLayout = ({ isDark, headerContent, sidebarContent, mainContent, footerContent }) => {
+const PageLayout = ({ headerContent, sidebarContent, mainContent, footerContent }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
     return (
         <div className="new-layout">
             <div className="layout-content">
-                <aside className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`} style={{
-                    backgroundColor: !isDark ? '#fff' : '#101e36',
-                    color: !isDark ? '#000' : '#fff'
-                }}>
+                <motion.aside
+                    className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}
+                    initial={{ x: 0 }}
+                    animate={{ x: isSidebarOpen ? 0 : '-100%' }}
+                    transition={{ duration: 0.2 }}
+                >
                     {sidebarContent}
-                </aside>
-                <div className="sidebar-toggle" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                </motion.aside>
+                <motion.div
+                    className="sidebar-toggle"
+                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                >
                     {isSidebarOpen ? '←' : '→'}
-                </div>
-                <main className="main-content">{mainContent}</main>
+                </motion.div>
+                <main className={`main-content ${!isSidebarOpen ? 'sidebar-closed' : ''}`}>
+                    {mainContent}
+                </main>
             </div>
             <footer className="footer">{footerContent}</footer>
         </div>
