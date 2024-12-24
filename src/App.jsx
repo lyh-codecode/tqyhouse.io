@@ -1,17 +1,17 @@
-import './App.css'
+import '@/App.css'
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-import LoadingScreen from './components/LoadingScreen'
-import SiteSection from './components/SiteSection/index'
-import Navbar from './components/Navbar'
-import Studio from './views/Studio'
-import KnowledgeBase from './views/KnowledgeBase'
-import PracticeProjects from './views/PracticeProjects'
-import Planning from './views/Planning'
-import AboutMe from './views/about/AboutMe'
-import PageLayout from './components/knowledge-Layout'
+import LoadingScreen from '@components/LoadingScreen'
+import SiteSection from '@components/SiteSection'
+import Navbar from '@components/Navbar'
+import Studio from '@views/Studio'
+import KnowledgeBase from '@views/KnowledgeBase'
+import PracticeProjects from '@views/PracticeProjects'
+import Planning from '@views/Planning'
+import AboutMe from '@views/about/AboutMe'
+import PageLayout from '@components/knowledge-Layout'
 
 function App() {
   const [isDark, setIsDark] = useState(() => {

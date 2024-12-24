@@ -9,9 +9,11 @@ const MarkdownViewer = ({ filePath }) => {
     useEffect(() => {
         const fetchMarkdown = async () => {
             try {
-                // 使用动态导入来加载 Markdown 文件
-                const md = await import(`../../assets/${filePath}`);
-                // 如果是 Vite，使用 .default 获取文件内容
+                // 使用 new URL 构造动态导入路径
+                const md = await import(
+                    /* @vite-ignore */
+                    new URL(`../../assets/${filePath}`, import.meta.url).href
+                );
                 const response = await fetch(md.default);
                 const text = await response.text();
                 setContent(text);
