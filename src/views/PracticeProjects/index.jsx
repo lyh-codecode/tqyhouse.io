@@ -5,7 +5,7 @@ import MarkdownViewer from '../../components/transform-md/MarkdownViewer';
 
 const PracticeProjects = ({ isDark }) => {
     const items = [
-        { title: '复现网易云音乐', description: '这是', filePath: '/src/assets/myproject/wyy.md' }
+        { title: '复现网易云音乐', description: '这是', filePath: '/myproject/wyy.md' }
     ];
 
     const [selectedItem, setSelectedItem] = useState(items[0]); // 默认选择第一个项目
