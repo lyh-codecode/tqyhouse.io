@@ -10,10 +10,7 @@ const MarkdownViewer = ({ filePath }) => {
         const fetchMarkdown = async () => {
             try {
                 // 使用 new URL 构造动态导入路径
-                const md = await import(
-                    /* @vite-ignore */
-                    new URL(`../../assets/${filePath}`, import.meta.url).href
-                );
+                const md = await import(filePath);
                 const response = await fetch(md.default);
                 const text = await response.text();
                 setContent(text);
