@@ -83,7 +83,7 @@ const KnowledgeBase = ({ isDark }) => {
                 {
                     title: '网络协议',
                     description: '常见网络协议介绍',
-                    link: 'https://computer.org',
+                    link: 'https://e3u56nv7qa.feishu.cn/docx/ZyHcdysq7oGvTFxg8C2cdWlcnUc',
                     cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Internet_map_1024.jpg/1200px-Internet_map_1024.jpg'
                 }
             ]
