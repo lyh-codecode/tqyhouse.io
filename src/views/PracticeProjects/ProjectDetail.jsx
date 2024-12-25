@@ -5,7 +5,7 @@ import './style.css';
 
 const ProjectDetail = () => {
     const { projectId } = useParams(); // 获取项目 ID
-    const filePath = (`../../assets/myproject/${projectId}.md`); // 根据项目 ID 构造 Markdown 文件路径
+    const filePath = (`../../assets/${projectId}.md`); // 根据项目 ID 构造 Markdown 文件路径
 
     return (
         <div className="project-detail">

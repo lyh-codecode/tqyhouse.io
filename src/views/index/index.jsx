@@ -1,9 +1,28 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import SkillSection from '@components/SkillSection';
 import SiteSection from '@components/SiteSection';
+import Loading from '@components/Loading';
 import './style.css';
 
 const Index = ({ isDark }) => {
+    const [loading, setLoading] = useState(true);
+    const [hasVisited, setHasVisited] = useState(false);
+
+    useEffect(() => {
+        const visited = sessionStorage.getItem('hasVisited');
+        if (!visited) {
+            const timer = setTimeout(() => {
+                setLoading(false);
+                sessionStorage.setItem('hasVisited', 'true');
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        } else {
+            setLoading(false);
+        }
+    }, []);
+
     const containerVariants = {
         initial: {
             opacity: 0
@@ -37,27 +56,33 @@ const Index = ({ isDark }) => {
     };
 
     return (
-        <motion.div
-            className="index-container"
-            variants={containerVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-        >
-            <motion.div
-                custom={0}
-                variants={sectionVariants}
-            >
-                <SiteSection isDark={isDark} />
-            </motion.div>
+        <>
+            {loading ? (
+                <Loading />
+            ) : (
+                <motion.div
+                    className="index-container"
+                    variants={containerVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                >
+                    <motion.div
+                        custom={0}
+                        variants={sectionVariants}
+                    >
+                        <SiteSection isDark={isDark} />
+                    </motion.div>
 
-            <motion.div
-                custom={1}
-                variants={sectionVariants}
-            >
-                <SkillSection isDark={isDark} />
-            </motion.div>
-        </motion.div>
+                    <motion.div
+                        custom={1}
+                        variants={sectionVariants}
+                    >
+                        <SkillSection isDark={isDark} />
+                    </motion.div>
+                </motion.div>
+            )}
+        </>
     );
 };
 
