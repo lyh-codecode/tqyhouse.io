@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import Loading from '@components/Loading'
-import LoadingScreen from './components/LoadingScreen'
+// import LoadingScreen from './components/LoadingScreen'
 
 import Navbar from '@components/Navbar'
 import Studio from '@views/Studio'
@@ -13,6 +13,7 @@ import PracticeProjects from '@views/PracticeProjects'
 import Planning from '@views/Planning'
 import AboutMe from '@views/about/AboutMe'
 import Index from '@views/index'
+import ProjectDetail from './views/PracticeProjects/ProjectDetail'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   });
 
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPath, setCurrentPath] = useState('/index'); // 默认路径
 
   useEffect(() => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -40,7 +42,7 @@ function App() {
   return (
     <Router>
       <AnimatePresence mode='wait'>
-        {isLoading ? (
+        {isLoading && currentPath === '*/index' ? ( // 仅在路径为 /index 时显示加载动画
           <Loading key="loading" />
         ) : (
           <motion.div
@@ -54,7 +56,8 @@ function App() {
             <div className="container" style={{ flex: 1 }}>
               <Routes>
                 <Route path="/knowledge-base" element={<KnowledgeBase isDark={isDark} />} />
-                <Route path="/practice-projects" element={<PracticeProjects isDark={isDark} />} />
+                <Route path="/practice-projects" element={<PracticeProjects />} />
+                <Route path="/practice-projects/:projectId" element={<ProjectDetail />} />
                 <Route path="/studio" element={<Studio />} />
                 <Route path="/planning" element={<Planning />} />
                 <Route path="/index" element={<Index isDark={isDark} />} />

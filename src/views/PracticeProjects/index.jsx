@@ -1,36 +1,46 @@
-import React, { useState } from 'react';
-import './style.css';
-import PageLayout from '../../components/knowledge-Layout';
-import MarkdownViewer from '../../components/transform-md/MarkdownViewer';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import ProjectLayout from '@components/ProjectLayout';
 
+const PracticeProjects = () => {
+    const navigate = useNavigate();
 
-const PracticeProjects = ({ isDark }) => {
-    const items = [
-        { title: '复现网易云音乐', description: '这是', filePath: '../../assets/myproject/wyy.md' }
+    const projects = [
+        {
+            id: 'project1',
+            title: '复现网易云',
+            description: '这是项目一的描述',
+            icon: '📻'
+        },
+        {
+            id: 'project2',
+            title: '项目二',
+            description: '这是项目二的描述',
+            icon: '📱'
+        },
+        {
+            id: 'project3',
+            title: '项目三',
+            description: '这是项目三的描述',
+            icon: '🌐'
+        },
+        {
+            id: 'project4',
+            title: '项目四',
+            description: '这是项目四的描述',
+            icon: '🚀'
+        }
     ];
 
-    const [selectedItem, setSelectedItem] = useState(items[0]); // 默认选择第一个项目
-    const sidebarContent = (
-        <div>
-            <ul>
-                {items.map((item, index) => (
-                    <li key={index} onClick={() => setSelectedItem(item)} style={{ cursor: 'pointer' }}>
-                        {item.title}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-
-    const mainContent = (<MarkdownViewer filePath={selectedItem.filePath} />);
+    const handleProjectClick = (id) => {
+        navigate(`/practice-projects/${id}`);
+    };
 
     return (
-        <PageLayout
-            headerContent="练习项目的总结"
-            sidebarContent={sidebarContent}
-            mainContent={mainContent}
-            isDark={isDark}
-        />
+        <div>
+            <h1>练习项目</h1>
+            <ProjectLayout projects={projects} onProjectClick={handleProjectClick} />
+        </div>
     );
 };
 
