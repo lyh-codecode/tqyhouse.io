@@ -129,6 +129,7 @@ const KnowledgeBase = ({ isDark }) => {
                 className="content-title"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
             >
                 {selectedItem.title}
                 <span className="content-description">{selectedItem.description}</span>

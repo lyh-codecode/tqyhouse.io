@@ -24,9 +24,9 @@ const PageLayout = ({ headerContent, sidebarContent, mainContent, footerContent 
                 >
                     {isSidebarOpen ? '←' : '→'}
                 </motion.div>
-                <main className={`${!isSidebarOpen ? 'sidebar-closed' : ''}`}>
-                </main>
-                {mainContent}
+                <div className='content'>
+                    {mainContent}
+                </div>
             </div>
             <footer className="footer">{footerContent}</footer>
         </div>
