@@ -169,7 +169,7 @@
     .item-grid {
         width: 100%;
         grid-template-columns: 1fr;
-        margin-left: -2rem;
+        margin-left: -1.5rem;
     }
 
     .item-card {
@@ -178,14 +178,27 @@
         border-radius: 16px;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        height: 160px;
+        height: 180px;
         display: flex;
         flex-direction: column;
         width: 85%;
         transition: all 0.3s ease;
         cursor: pointer;
-        padding: 15px;
+        padding: 10px;
         backdrop-filter: blur(8px);
+    }
+
+    .card-cover {
+        height: 80%;
+    }
+
+    .card-content {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .card-content h3 {
+        margin: 0;
     }
 
     .item-icon {
