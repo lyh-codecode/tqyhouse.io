@@ -1,30 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import './style.css';
 
-const PageLayout = ({ headerContent, sidebarContent, mainContent, footerContent }) => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
+const PageLayout = ({ sidebarContent, mainContent, footerContent }) => {
     return (
         <div className="new-layout">
             <div className="layout-content">
                 <motion.aside
-                    className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}
+                    className="sidebar"
                     initial={{ x: 0 }}
-                    animate={{ x: isSidebarOpen ? 0 : '-100%' }}
+                    animate={{ x: 0 }}
                     transition={{ duration: 0.2 }}
                 >
                     {sidebarContent}
                 </motion.aside>
-                <motion.div
-                    className="sidebar-toggle"
-                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    {isSidebarOpen ? '←' : '→'}
-                </motion.div>
-                <main className={`main-content ${!isSidebarOpen ? 'sidebar-closed' : ''}`}>
+                <main className="main-content">
                     {mainContent}
                 </main>
             </div>

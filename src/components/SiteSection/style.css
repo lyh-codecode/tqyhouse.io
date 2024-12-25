@@ -16,21 +16,14 @@
     padding: 1.5rem;
     border-radius: 10px;
     transition: transform 0.3s;
-    flex: 1 1 26%;
-    max-width: 26%;
+    flex: 1 1 15%;
+    max-width: 20%;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.site-card2 {
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    flex: 1 1 26%;
-    max-width: 41%;
-}
 
-.site-card:hover,
-.site-card2:hover {
+
+.site-card:hover {
     transform: translateY(-5px);
     cursor: pointer;
 }
@@ -56,12 +49,6 @@
 
 @media (max-width: 768px) {
     .site-card {
-        flex: 1 1 80%;
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .site-card2 {
         flex: 1 1 80%;
         max-width: 80%;
         margin: 0 auto;

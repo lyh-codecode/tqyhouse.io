@@ -115,7 +115,6 @@ export default function SkillSection({ isDark }) {
 
     return (
         <section className="skill-section">
-            <h2>⚡ My Skills</h2>
             <div className="carousel-container">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -146,29 +145,6 @@ export default function SkillSection({ isDark }) {
                     </motion.div>
                 </AnimatePresence>
 
-                <div className="carousel-controls">
-                    <button
-                        className="carousel-button prev"
-                        onClick={() => setCurrentIndex((prev) => (prev - 1 + skills.length) % skills.length)}
-                    >
-                        ←
-                    </button>
-                    <div className="carousel-dots">
-                        {skills.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
-                                onClick={() => handleDotClick(index)}
-                            />
-                        ))}
-                    </div>
-                    <button
-                        className="carousel-button next"
-                        onClick={() => setCurrentIndex((prev) => (prev + 1) % skills.length)}
-                    >
-                        →
-                    </button>
-                </div>
             </div>
         </section>
     )

@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* background: linear-gradient(45deg, #4a1d96, #be185d); */
+    min-width: 100vh;
     position: relative;
     overflow: hidden;
+
 }
 
 /* 添加星星效果 */
@@ -68,12 +69,10 @@ ul {
 }
 
 li {
-    /* background: rgba(255, 255, 255, 0.1); */
     padding: 1rem;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* border: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 li:hover {
@@ -139,7 +138,7 @@ li:hover {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: linear-gradient(-45deg, #ffb3e2, #7977d5);
+    background: linear-gradient(-45deg, #c5a0b7, #7a79b0);
 }
 
 .item-icon {

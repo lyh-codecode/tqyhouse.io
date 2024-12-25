@@ -14,15 +14,6 @@ body {
   padding-top: 9vh;
 }
 
-.left-container {
-  flex: 1;
-  border-right: 1px solid #eee;
-}
-
-.right-container {
-  flex: 3;
-}
-
 @media (max-width: 768px) {
   .container {
     width: 100%;

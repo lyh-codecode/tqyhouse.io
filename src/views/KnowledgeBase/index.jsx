@@ -102,9 +102,7 @@ const KnowledgeBase = ({ isDark }) => {
             ]
         },
     ];
-
     const [selectedItem, setSelectedItem] = useState(items[0]);
-
     const sidebarContent = (
         <div className="sidebar-container">
             <h2 className="sidebar-title">知识导航</h2>
@@ -160,16 +158,6 @@ const KnowledgeBase = ({ isDark }) => {
 
     return (
         <PageLayout
-            headerContent={
-                <motion.div
-                    className="header-content"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                >
-                    <h1>知识库</h1>
-                    <p>前端学习笔记整理</p>
-                </motion.div>
-            }
             sidebarContent={sidebarContent}
             mainContent={mainContent}
             footerContent={
