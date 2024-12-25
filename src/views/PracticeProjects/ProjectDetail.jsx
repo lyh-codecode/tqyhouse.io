@@ -9,7 +9,7 @@ const ProjectDetail = () => {
 
     return (
         <div className="project-detail">
-            <h1>项目详情</h1>
+            <h1>项目总结</h1>
             <MarkdownViewer filePath={filePath} />
         </div>
     );
