@@ -57,7 +57,7 @@ const Planning = () => {
 
     return (
         <div className="planning-layout">
-            <main className="main-content">
+            <main className="planning-main">
                 <motion.h1
                     className="page-title"
                     initial={{ opacity: 0, y: -20 }}

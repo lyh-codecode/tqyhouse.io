@@ -161,17 +161,6 @@
     color: var(--text-secondary);
 }
 
-@media (max-width: 1024px) {
-    .item-grid {
-        gap: 1.5rem;
-        width: 100%;
-    }
-
-    .item-card {
-        height: 450px;
-    }
-}
-
 @media (max-width: 768px) {
     .item-grid {
         width: 100%;
