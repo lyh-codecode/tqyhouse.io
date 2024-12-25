@@ -8,23 +8,7 @@
 
 }
 
-/* 添加星星效果 */
-.planning-layout::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 50px 160px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 160px 120px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0));
-    background-repeat: repeat;
-    animation: twinkle 4s linear infinite;
-    opacity: 0.3;
-}
+
 
 @keyframes twinkle {
     0% {
@@ -36,11 +20,7 @@
     }
 }
 
-.main-content {
-    position: relative;
-    z-index: 1;
-    padding: 2rem;
-}
+
 
 .item-card {
     background: rgba(255, 255, 255, 0.1);
@@ -99,9 +79,7 @@ li:hover {
         max-width: 100%;
     }
 
-    .main-content {
-        padding: 1rem;
-    }
+
 }
 
 .page-title {

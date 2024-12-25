@@ -27,7 +27,7 @@
 .main-content {
     flex: 1;
     padding: 1rem;
-    padding-left: calc(15% + 1rem);
+    padding-left: calc(10%);
     transition: padding-left 0.3s ease;
 }
 
@@ -112,10 +112,12 @@
     }
 
     .main-content {
-        padding-left: calc(25% + 1rem);
+        padding: calc(8%);
     }
 
-    .main-content.sidebar-closed {
-        padding-left: 1rem;
+    .layout-content {
+        display: flex;
+        padding: 0;
     }
+
 }
