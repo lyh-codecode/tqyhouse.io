@@ -26,17 +26,16 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
-li {
+.sub-li {
     padding: 1rem;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-li:hover {
+.sub-li:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
     border-color: rgba(255, 255, 255, 0.3);

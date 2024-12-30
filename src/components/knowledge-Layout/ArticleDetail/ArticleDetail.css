@@ -1,0 +1,36 @@
+.article-detail {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: #7691d3;
+    transition: color 0.3s;
+}
+
+.content {
+    flex: 3;
+}
+
+.article-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-content {
+    margin-bottom: 2rem;
+}
+
+.sidebar-item {
+    text-align: left;
+}
+
+.sidebar-item:hover {
+    color: #4d71ce;
+    transition: color 0.3s;
+    transform: translateY(-2px);
+    transition: all .3s ease;
+}

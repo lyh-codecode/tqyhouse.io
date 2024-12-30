@@ -41,6 +41,35 @@
     text-align: center;
 }
 
+.footer-content {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: -7rem;
+}
+
+.footer-content button {
+    background: rgba(255, 255, 255, 0.5);
+    color: #1c1fad75;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.footer-content button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+.footer-content button:active {
+    transform: scale(0.95);
+}
+
 .sidebar-toggle {
     position: fixed;
     left: 18%;

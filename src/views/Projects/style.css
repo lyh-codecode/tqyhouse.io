@@ -1,9 +1,25 @@
+.project-detail {
+    display: flex;
+}
+
 .pj-title {
     padding-left: 3rem;
 }
 
 .item-card:hover {
     transform: translateY(-5px);
+}
+
+
+.navigate {
+    position: relative;
+    flex: 1;
+    border-right: 1px solid #ccc;
+}
+
+.markdown-content {
+    flex: 7;
+    padding-left: 2rem;
 }
 
 @media (max-width: 768px) {

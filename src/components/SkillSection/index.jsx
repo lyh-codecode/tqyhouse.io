@@ -104,7 +104,7 @@ export default function SkillSection({ isDark }) {
                     </motion.div>
                 </AnimatePresence>
 
-                <div className="carousel-controls">
+                {/* <div className="carousel-controls">
                     <button className="carousel-button prev" onClick={() => handleNext(false)}>
                         ←
                     </button>
@@ -120,7 +120,7 @@ export default function SkillSection({ isDark }) {
                     <button className="carousel-button next" onClick={() => handleNext(true)}>
                         →
                     </button>
-                </div>
+                </div> */}
             </div>
         </section>
     )

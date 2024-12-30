@@ -96,6 +96,7 @@ const Planning = () => {
                                         <ul className="sub-items">
                                             {item.subItems.map((subItem, subIndex) => (
                                                 <motion.li
+                                                    className='sub-li'
                                                     key={subIndex}
                                                     initial={{ opacity: 0, x: -20 }}
                                                     animate={{ opacity: 1, x: 0 }}

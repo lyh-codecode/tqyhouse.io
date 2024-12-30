@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './style.css';
 
-const PageLayout = ({ headerContent, sidebarContent, mainContent, footerContent }) => {
+const PageLayout = ({ sidebarContent, mainContent }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
     return (
@@ -28,7 +28,6 @@ const PageLayout = ({ headerContent, sidebarContent, mainContent, footerContent 
                     {mainContent}
                 </div>
             </div>
-            <footer className="footer">{footerContent}</footer>
         </div>
     );
 };
