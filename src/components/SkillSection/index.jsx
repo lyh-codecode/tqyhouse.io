@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './style.css'
-import reactIcon from '../../assets/react.svg'
-import vueIcon from '../../assets/vue.svg'
-import wxIcon from '../../assets/weixin.svg'
-import taroIcon from '../../assets/taro.svg'
-import nodeIcon from '../../assets/nodejs.svg'
-import framerIcon from '../../assets/framer.svg'
-import gsapIcon from '../../assets/gsap.svg'
-import jsIcon from '../../assets/javascript.svg'
-import webpackIcon from '../../assets/webpack.svg'
-import gitIcon from '../../assets/git.svg'
-import typeSIcon from '../../assets/typescript.svg'
-import viteIcon from '../../assets/vite.svg'
+import reactIcon from '@assets/svg/react.svg'
+import vueIcon from '@assets/svg/vue.svg'
+import wxIcon from '@assets/svg/weixin.svg'
+import taroIcon from '@assets/svg/taro.svg'
+import nodeIcon from '@assets/svg/nodejs.svg'
+import framerIcon from '@assets/svg/framer.svg'
+import gsapIcon from '@assets/svg/gsap.svg'
+import jsIcon from '@assets/svg/javascript.svg'
+import webpackIcon from '@assets/svg/webpack.svg'
+import gitIcon from '@assets/svg/git.svg'
+import typeSIcon from '@assets/svg/typescript.svg'
+import viteIcon from '@assets/svg/vite.svg'
 
 export default function SkillSection({ isDark }) {
     const backgroundColor = !isDark ? 'rgba(34, 156, 237, 0.1)' : 'rgba(255, 255, 255, 0.1)';

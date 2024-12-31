@@ -1,5 +1,5 @@
 import './style.css'
-import myIcon from '../../assets/my.jpg'
+import myIcon from '@assets/img/my.jpg'
 import ImageModal from '../ImageModal'
 import { useState } from 'react'
 

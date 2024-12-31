@@ -20,35 +20,33 @@ const KnowledgeBase = ({ isDark }) => {
             title: 'JavaScript',
             icon: 'JS',
             description: 'JavaScript 相关知识整理',
+            link: '/knowledge-base/javascript',
             children: [
                 {
-                    id: 'article-1',
+                    id: 'article1',
                     title: 'JS基础',
                     description: 'JavaScript 基础知识',
-                    link: '/knowledge-base/javascript/js-basics',
                     cover: hh1
                 },
                 {
                     id: 'article-2',
                     title: 'JS高级',
                     description: 'JavaScript 高级特性',
-                    link: '/knowledge-base/javascript/js-advanced',
                     cover: hh6
                 },
                 {
                     id: 'article-3',
                     title: 'JS异步编程',
                     description: '异步编程与Promise',
-                    link: '/knowledge-base/javascript/js-async',
                     cover: hh8
                 },
                 {
                     id: 'article-4',
                     title: 'JS性能优化',
                     description: 'JavaScript 性能优化技巧',
-                    link: '/knowledge-base/javascript/js-performance',
                     cover: hh5
-                },]
+                },
+            ]
         },
         {
             id: 'article1',
@@ -165,7 +163,6 @@ const KnowledgeBase = ({ isDark }) => {
     const [selectedItem, setSelectedItem] = useState(items[0]);
     const sidebarContent = (
         <div className="sidebar-container">
-            <h2 className="sidebar-title">知识导航</h2>
             <motion.ul className="sidebar-list">
                 {items.map((item, index) => (
                     <motion.li
@@ -182,6 +179,7 @@ const KnowledgeBase = ({ isDark }) => {
             </motion.ul>
         </div>
     );
+
     const navigate = useNavigate();
     const handleClick = (path) => {
         navigate(path)
@@ -200,12 +198,12 @@ const KnowledgeBase = ({ isDark }) => {
             <div className="item-grid">
                 {selectedItem.children.map((child, index) => (
                     <motion.div
-                        key={index}
+                        key={child.id}
                         className="item-card"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        onClick={() => handleClick(child.link)}
+                        onClick={() => handleClick(`${selectedItem.link}?id=${child.id}`)}
                     >
                         <div className="card-cover">
                             <img src={child.cover} alt={child.title} />

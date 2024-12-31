@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'; // 用于支持 GitHub 风格的 Markdown
 import './ArticleDetail.css';
+import js1 from "@assets/articles/javascript/article1.md"
+import js from '@eslint/js';
 
 const ArticleDetail = () => {
-    const { id } = useParams(); // 获取文章 ID
-    const filePath = `/src/assets/project1.md`; // 根据文章 ID 构造 Markdown 文件路径
+    const { id } = useParams();
+    const location = useLocation(); // 获取当前 location 对象
+    const queryParams = new URLSearchParams(location.search);
+    const articleId = queryParams.get('id');
     const [content, setContent] = useState('');
-    const [sections, setSections] = useState([]); // 用于存储章节信息
+    const [sections, setSections] = useState([]);
+
 
     useEffect(() => {
         const fetchMarkdown = async () => {
             try {
-                const response = await fetch(filePath);
+                const response = await fetch(js1);
                 const text = await response.text();
                 setContent(text);
-
-                // 提取章节信息（假设章节以特定格式存在）
                 const sectionRegex = /^(#{1,3})\s+(.*)$/gm; // 匹配一级、二级和三级 Markdown 标题
                 const matches = [...text.matchAll(sectionRegex)];
                 const sectionList = matches.map(match => ({
@@ -30,11 +33,12 @@ const ArticleDetail = () => {
             } catch (error) {
                 console.error('Error loading markdown:', error);
                 setContent('Failed to load content.');
+
             }
         };
 
         fetchMarkdown();
-    }, [filePath]);
+    }, []);
 
     return (
         <>
@@ -55,13 +59,13 @@ const ArticleDetail = () => {
                         })}
                     </ul>
                 </aside>
-                <main className="content">
+                <div className="content">
                     <div className="markdown-content">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                             {content}
                         </ReactMarkdown>
                     </div>
-                </main>
+                </div>
             </div>
             <footer className="footer">
                 <div className='footer-content'>
@@ -70,9 +74,7 @@ const ArticleDetail = () => {
                 </div>
             </footer>
         </>
-
-
     );
 };
 
-export default ArticleDetail; 
+export default ArticleDetail;

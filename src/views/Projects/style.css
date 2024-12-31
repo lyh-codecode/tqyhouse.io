@@ -27,4 +27,14 @@
         flex: 1 1 100%;
         /* 在小屏幕上占满宽度 */
     }
+
+    .markdown-content {
+        flex: 1;
+        padding: 2rem;
+        max-width: 100%;
+    }
+
+    .navigate {
+        display: none;
+    }
 }

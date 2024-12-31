@@ -14,21 +14,13 @@
     left: 0;
     top: 5rem;
     height: 100vh;
-    max-width: 18%;
-    min-width: 18%;
+    width: 18%;
     transition: all 0.3s ease;
     z-index: 80;
-    text-align: center;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.content {
-    flex: 1;
-    padding: 1rem;
-    padding-left: calc(10%);
-    transition: padding-left 0.3s ease;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-right: 2rem;
 }
 
 

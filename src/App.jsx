@@ -37,9 +37,8 @@ function App() {
           <Navbar isDark={isDark} setIsDark={setIsDark} />
           <div className="container" style={{ flex: 1 }}>
             <Routes>
-              <Route path="/knowledge-base" element={<KnowledgeBase isDark={isDark} />}>
-              </Route>
-              <Route path="/knowledge-base/React" element={<ArticleDetail isDark={isDark} />} />
+              <Route path="/knowledge-base" element={<KnowledgeBase isDark={isDark} />} />
+              <Route path="/knowledge-base/:id" element={<ArticleDetail isDark={isDark} />} />
               <Route path="/practice-projects" element={<PracticeProjects />} />
               <Route path="/practice-projects/:projectId" element={<ProjectDetail />} />
               <Route path="/planning" element={<Planning />} />
