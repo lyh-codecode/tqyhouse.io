@@ -43,11 +43,11 @@ const ArticleDetail = () => {
     return (
         <>
             <div className="article-detail">
-                <aside className="sidebar">
+                <aside className="k-sidebar">
                     <ul className="sidebar-list">
                         {sections.map((section) => {
                             const ListItem = () => (
-                                <li key={section.id} className="sidebar-item" style={{ paddingLeft: `${15 * section.level + 15}px`, fontSize: `${1.3 - 0.07 * section.level}rem` }}>
+                                <li key={section.id} className="sidebar-item" style={{ paddingLeft: `${10 * section.level + 10}px`, fontSize: `${1.3 - 0.07 * section.level}rem` }}>
                                     <a href={`#${section.id}`} className="sidebar-link">{section.title}</a>
                                 </li>
                             );
@@ -59,7 +59,7 @@ const ArticleDetail = () => {
                         })}
                     </ul>
                 </aside>
-                <div className="content">
+                <div className="k-content">
                     <div className="markdown-content">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                             {content}

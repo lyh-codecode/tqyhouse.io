@@ -13,25 +13,19 @@
 
 .navigate {
     position: relative;
-    flex: 1;
+    width: 20%;
     border-right: 1px solid #ccc;
 }
 
 .markdown-content {
-    flex: 7;
+    width: 80%;
+    padding: 5vh 0;
     padding-left: 2rem;
 }
 
 @media (max-width: 768px) {
     .item-card {
         flex: 1 1 100%;
-        /* 在小屏幕上占满宽度 */
-    }
-
-    .markdown-content {
-        flex: 1;
-        padding: 2rem;
-        max-width: 100%;
     }
 
     .navigate {

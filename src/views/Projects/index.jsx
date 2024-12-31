@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import ProjectLayout from '@components/ProjectLayout';
+import ProjectLayout from '@components/Project-Layout';
 import './style.css'
 const PracticeProjects = () => {
     const navigate = useNavigate();

@@ -5,15 +5,28 @@
     padding: 2rem;
 }
 
+.k-sidebar {
+    position: fixed;
+    left: 0;
+    top: 5rem;
+    height: 100vh;
+    width: 25%;
+    transition: all 0.3s ease;
+    z-index: 80;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .sidebar-link {
     text-decoration: none;
     color: #7691d3;
     transition: color 0.3s;
 }
 
-.content {
-    flex: 3;
-    padding-left: 6rem;
+.k-content {
+    width: 75%;
+    padding-left: 20%;
 }
 
 .article-title {
@@ -21,9 +34,43 @@
     margin-bottom: 1rem;
 }
 
+.footer {
+    padding-bottom: 10vh;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: -1rem;
+}
+
+.footer-content button {
+    background: rgba(255, 255, 255, 0.5);
+    color: #1c1fad75;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.footer-content button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+.footer-content button:active {
+    transform: scale(0.95);
+}
+
 /* 媒体查询：手机端样式 */
 @media (max-width: 768px) {
-    .article-detail .sidebar {
+    .article-detail .k-sidebar {
         display: none;
     }
 
@@ -31,8 +78,8 @@
         padding: 0;
     }
 
-    .content {
-        max-width: 100%;
+    .k-content {
+        width: 100%;
         padding-left: 0;
     }
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
-import './style.css';
 import PageLayout from '@components/knowledge-Layout';
 import hh1 from '@assets/img/hh1.jpg'
 import hh2 from '@assets/img/hh2.jpg'
@@ -16,12 +15,18 @@ const KnowledgeBase = ({ isDark }) => {
 
     const items = [
         {
-            id: 'article1',
+            id: 'article0',
             title: 'JavaScript',
             icon: 'JS',
             description: 'JavaScript 相关知识整理',
             link: '/knowledge-base/javascript',
             children: [
+                {
+                    id: 'article1',
+                    title: 'JS基础',
+                    description: 'JavaScript 基础知识',
+                    cover: hh1
+                },
                 {
                     id: 'article1',
                     title: 'JS基础',
